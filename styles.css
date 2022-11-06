@@ -6,40 +6,43 @@
   box-sizing: border-box;
 }
 
-.body {
+body {
   display: flex;
-  flex-direction: row;
 }
 
 .left {
-  height: 100vh;
   width: 40vw;
+  height: 100vh;
+  background-image: url(./img/shayna-douglas-2n3HqAwAV58-unsplash.jpg);
+  background-size: cover;
 }
 
-img {
-  height: 100vh;
-  width: 40vw;
+.logo-section {
+  height: 15vh;
+  margin-top: 25vh;
+  background-color: rgba(0, 0, 0, 0.445);
 }
 
 .right {
   width: auto;
   height: 100vh;
-  font-size: 24px;
-  background-color: #40b83a;
 }
 
 header {
-  height: 30vh;
-  color: white;
+  height: 25vh;
+  text-align: center;
+  background-color: ghostwhite;
 }
 
 form {
-  height: 40vh;
-  color: white;
-  background-color: #4fe048;
+  height: 50vh;
 }
 
 footer {
-  height: 30vh;
-  color: white;
+  height: 25vh;
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: ghostwhite;
 }
