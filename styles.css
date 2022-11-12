@@ -4,14 +4,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto";
+  font-family: 'Roboto';
   color: black;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
 
 @font-face {
-  font-family: "Roboto";
+  font-family: 'Roboto';
   src: url(./fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf);
 }
 
@@ -37,7 +37,7 @@ body {
 }
 
 .logo-section > p {
-  font-family: "Comfortaa";
+  font-family: 'Comfortaa';
   font-size: 60px;
 }
 
@@ -48,7 +48,6 @@ body {
 
 header {
   height: 25vh;
-  /* background-color: rgb(100, 238, 105); */
   font-size: 24px;
   display: flex;
   flex-direction: column;
@@ -62,7 +61,6 @@ header > p {
 }
 
 form {
-  /* background-color: rgb(84, 199, 88); */
   background-color: rgb(100, 238, 105);
   height: 50vh;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -80,7 +78,6 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 5rem;
-  /* background-color: rgb(100, 238, 105); */
 }
 
 .form-item {
@@ -94,7 +91,6 @@ input {
   height: 2rem;
   border-radius: 5px;
   color: black;
-  /* background-color: rgb(40, 130, 48); */
   border: 1px solid black;
 }
 
@@ -109,24 +105,13 @@ label {
   font-size: 14px;
 }
 
-.one {
-  display: flex;
-  justify-content: space-between;
-  width: 40vw;
-  margin-bottom: 1rem;
-}
-
-.two {
-  display: flex;
-  justify-content: space-between;
-  width: 40vw;
-  margin-bottom: 1rem;
-}
-
+.one,
+.two,
 .three {
   display: flex;
   justify-content: space-between;
   width: 40vw;
+  margin-bottom: 1rem;
 }
 
 button {
@@ -140,6 +125,21 @@ button {
   border: 1px solid black;
   cursor: pointer;
   font-size: 14px;
-
+  margin-top: 2rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+input:focus {
+  border: 2px solid #2735ca;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  outline: none;
+}
+
+input:invalid {
+  border: 2px solid red;
+}
+.pass2::after {
+  content: 'Passwords do not match';
+  color: red;
+  font-size: 14px;
 }
