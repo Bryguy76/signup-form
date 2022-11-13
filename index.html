@@ -30,44 +30,52 @@
         </p>
         <p>We'll teach you everything you need to know!</p>
       </header>
-      <form action="">
+      <form action="/" method="get" id="form">
         <p>Sign up here</p>
         <div class="one">
           <div class="form-item">
             <label for="first_name">First Name</label>
-            <input type="text" name="first_name" id="first_name" required />
+            <input type="text" name="first_name" id="first_name" />
+            <div class="firstNameError error-info"></div>
           </div>
 
           <div class="form-item">
             <label for="last_name">Last Name</label>
-            <input type="text" name="last_name" id="last_name" required />
+            <input type="text" name="last_name" id="last_name" />
+            <div class="lastNameError error-info"></div>
           </div>
         </div>
         <div class="two">
           <div class="form-item">
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" required />
+            <input type="email" name="email" id="email" />
+            <div class="emailError error-info"></div>
           </div>
 
           <div class="form-item">
             <label for="phone_number">Phone Number</label>
             <input type="tel" name="phone_number" id="phone_number" />
+            <div class="phoneNumberError error-info"></div>
           </div>
         </div>
         <div class="three">
           <div class="form-item">
             <label for="pass">Password</label>
-            <input type="password" name="pass" id="pass" required />
+            <input type="password" name="pass" id="pass" />
+            <div class="passwordError error-info"></div>
           </div>
 
           <div class="form-item">
             <label for="pass2">Confirm Password</label>
-            <input type="password" name="pass2" id="pass2" required />
+            <input type="password" name="pass2" id="pass2" />
+            <div class="passwordMatchError error-info"></div>
           </div>
         </div>
+
+        <button id="button" type="button">Create Account</button>
       </form>
       <footer>
-        <button type="submit">Create Account</button>
+        <!-- <button type="submit">Create Account</button> -->
         <p>Already have an account? <a href="#">Log In</a></p>
       </footer>
     </div>

@@ -39,6 +39,7 @@ body {
 .logo-section > p {
   font-family: 'Comfortaa';
   font-size: 60px;
+  color: white;
 }
 
 .right {
@@ -74,9 +75,12 @@ footer {
   height: 25vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  gap: 5rem;
+}
+
+footer > p {
+  margin-bottom: 2rem;
 }
 
 .form-item {
@@ -96,6 +100,7 @@ input {
 form > p {
   font-size: 24px;
   margin-bottom: 3rem;
+  margin-top: 3rem;
 }
 
 label {
@@ -118,7 +123,7 @@ button {
   background-color: #eee;
   font-size: 16px;
   border-radius: 25px;
-  height: 2.5rem;
+  height: 3.5rem;
   width: 12rem;
   padding: 5px;
   border: 1px solid black;
@@ -126,6 +131,8 @@ button {
   font-size: 14px;
   margin-top: 2rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: relative;
+  top: 5rem;
 }
 
 input:focus {
@@ -134,11 +141,13 @@ input:focus {
   outline: none;
 }
 
-input:invalid {
+.error {
   border: 2px solid red;
 }
-.pass2::after {
-  content: 'Passwords do not match';
-  color: red;
+
+.error-info {
+  height: 1rem;
+  width: 20rem;
   font-size: 14px;
+  color: red;
 }
