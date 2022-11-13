@@ -20,8 +20,24 @@ const phoneNumberError = document.querySelector('.phoneNumberError');
 const passError = document.querySelector('.passwordError');
 const pass2Error = document.querySelector('.passwordMatchError');
 
-button.addEventListener('click', e => {
+const inputs = [firstName, lastName, email, phoneNumber, pass, pass2];
+const errorMessages = [
+  firstNameError,
+  lastNameError,
+  emailError,
+  phoneNumberError,
+  passError,
+  pass2Error,
+];
+
+form.addEventListener('submit', e => {
   errorSwitch = false;
+
+  //Reset pre-existing error styling and messages before validation
+  inputs.forEach(input => input.classList.remove('error'));
+  errorMessages.forEach(error => (error.textContent = ''));
+
+  //Validate each input feild
 
   if (firstName.value === '' || firstName.value == null) {
     errorSwitch = true;
@@ -54,7 +70,7 @@ button.addEventListener('click', e => {
   }
 
   if (
-    !phoneNumber.value.match(
+    !pass.value.match(
       /(?=^.{8,}$)(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[^A-Za-z0-9]).*/
     )
   ) {
